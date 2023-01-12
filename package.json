@@ -1,0 +1,36 @@
+{
+  "name": "zk-electronic-signature",
+  "version": "0.0.1",
+  "license": "MIT",
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.2.1",
+    "@nomiclabs/hardhat-waffle": "^2.0.3",
+    "@nomiclabs/hardhat-web3": "^2.0.0",
+    "@matterlabs/hardhat-zksync-solc": "^0.3.13",
+    "@matterlabs/hardhat-zksync-deploy": "^0.6.1",
+    "@matterlabs/hardhat-zksync-chai-matchers": "^0.1.0",
+    "@matterlabs/hardhat-zksync-verify": "0.1.1",
+    "@openzeppelin/contracts": "^4.8.0",
+    "zksync-web3": "^0.12.3",
+    "chai": "^4.3.7",
+    "ethers": "^5.7.2",
+    "hardhat": "^2.12.5",
+    "snarkjs": "^0.5.0",
+    "node-forge": "^0.10.0",
+    "circom_tester": "0.0.19",
+    "circomlibjs": "^0.1.4",
+    "circomlib": "^2.0.5",
+    "mocha-suppress-logs": "^0.3.1",
+    "dotenv": "16.0.3",
+    "browserify": "^17.0.0"
+  },
+
+  "scripts": {
+    "test0": "TEST_NETWORK=hh npx hardhat test",
+    "test1": "TEST_NETWORK=zkSync NODE_ENV=test npx hardhat test",
+    "p-update": "sh ./scripts/post-update-circuits.sh",
+    "pdf-info": "node ./scripts/show-docusign-pdf-info",
+    "start-ui": "http-server ./public -c-1",
+    "browserify": "browserify scripts/browserify-main.js --s module > ./public/assets/js/lib/browserify-main.js"
+  }
+}

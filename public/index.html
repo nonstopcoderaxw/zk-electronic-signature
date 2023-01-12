@@ -1,0 +1,129 @@
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>ZK Electronic Signature</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="./assets/img/favicon.png" rel="icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700|Open+Sans:300,300i,400,400i,700,700i" rel="stylesheet">
+
+  <link href="./assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="./assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="./assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="./assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="./assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+  <main id="main">
+    <section id="intro">
+      <div class="container">
+        <div class="row">
+          <h3 class="cta-title text-center">ZK Electronic Signature</h3>
+          <div class="col-lg-9 text-lg-start">
+            <p class="section-description c-section-description">
+              <ul class="c-section-description">
+                <li><i class="bi bi-check-circle"></i>Verifies an electronically signed agreement without revealing agreement content and the signer</li>
+                <li><i class="bi bi-check-circle"></i>Executes the binding Ethereum smart contract on a successful signature verification</li>
+              </ul>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="app" class="section-bg">
+      <div class="container" data-aos="fade-up">
+        <div class="section-header">
+          <h3 class="section-title">Demo</h3>
+          <span class="section-divider"></span>
+          <center>
+            <ul class="c-section-description">
+                <li><i class="bi bi-check-circle"></i>A crypto fund manager signs a funding approval letter with DocuSign. <a href="./assets/Sample_DocuSign_Budget_Approval_Letter.pdf" download>Download the sample e-agreement PDF here</a></li>
+                <li><i class="bi bi-check-circle"></i>ZK Electronic Signature verifies the signature of the agreement and transfers the agreed funds to an agreed wallet.</li>
+                <li><i class="bi bi-check-circle"></i>No information about the signed agreement content and the signer are revealed.</li>
+                <li><i class="bi bi-check-circle"></i>Go through the steps below to execute what's agreed in the signed document via a smart contract.</li>
+              </ul>
+          </center>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6">
+            <div class="box" id="cStep1Section">
+              <h3>Step 1</h3>
+              <h4><span>Connect your wallet</span></h4>
+              <ul>
+                <li><i class="bi bi-check-circle"></i>Please connect with the goerli testnet.</li>
+                <li><i class="bi bi-check-circle"></i>The connected account will only be paying the gas fee. Nothing else.</li>
+              </ul>
+              <button class="get-started-btn" onclick="connect()" id="cStep1Btn">Connect your wallet</button>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="box" id="cStep2Section">
+              <h3>Step 2</h3>
+              <h4><span>Generate the zk proof for the DocuSign PDF</span></h4>
+              <ul>
+                <li><i class="bi bi-check-circle"></i>Please drop the sample DocuSign PDF here.</li>
+                <li><i class="bi bi-check-circle"></i>The dropped electronic agreement stays within the browser without transfering to anywhere.</li>
+                <li><i class="bi bi-check-circle"></i>The zk proof will be generated within the browser.</li>
+                <li><i class="bi bi-check-circle"></i>It may take up to 1 to 2 minutes to complete this step.</li>
+              </ul>
+              <div class="form" id="fileDrop">
+                <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                  <div class="file-drop-area">
+                    <svg class="box__icon" xmlns="http://www.w3.org/2000/svg" width="50" height="43" viewBox="0 0 50 43"><path d="M48.4 26.5c-.9 0-1.7.7-1.7 1.7v11.6h-43.3v-11.6c0-.9-.7-1.7-1.7-1.7s-1.7.7-1.7 1.7v13.2c0 .9.7 1.7 1.7 1.7h46.7c.9 0 1.7-.7 1.7-1.7v-13.2c0-1-.7-1.7-1.7-1.7zm-24.5 6.1c.3.3.8.5 1.2.5.4 0 .9-.2 1.2-.5l10-11.6c.7-.7.7-1.7 0-2.4s-1.7-.7-2.4 0l-7.1 8.3v-25.3c0-.9-.7-1.7-1.7-1.7s-1.7.7-1.7 1.7v25.3l-7.1-8.3c-.7-.7-1.7-.7-2.4 0s-.7 1.7 0 2.4l10 11.6z"></path></svg>
+                    <p class="fake-btn">Choose the DocuSign PDF here</p>
+                    <center><input class="file-input" type="file" id="fileInput"/></center>
+                  </div>
+                </form>
+              </div>
+              <br/>
+              <button class="get-started-btn" onclick="zkVerify()" id="cStep2Btn">Zk-verify the electronic agreement</botton>
+              <div id="zkResult"></div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="box" id="cStep3Section">
+              <h3>Step 3</h3>
+              <h4><span>Execute the binding smart contract</span></h4>
+              <ul>
+                <li><i class="bi bi-check-circle"></i>On a successful verification of the proof by Step 2, the agreed actions written in the DocuSign PDF can be executed by a binding smart contract. </li>
+                <li><i class="bi bi-check-circle"></i>Click on the button below to submit the proof and execute the smart contract. </li>
+                <li><i class="bi bi-check-circle"></i>The connected wallet will only be paying the gas fees. No secrets of the DocuSign PDF will be revealed by this step.</li>
+                <li><i class="bi bi-check-circle"></i>No nullifier is implemented for the demo purpose. This will ensure the same electronic agreement can be executed multiple times.</li>
+              </ul>
+              <button class="get-started-btn" onclick="execSmartContract()" id="cStep3Btn">Execute the smart contract</button>
+              <div id="txResult">Executed! <a href="https://goerli.etherscan.io/tx/" target="_blank" id="tx">Link to Goerli tx<a/></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- End Pricing Section -->
+  </main>
+
+
+  <script src="./assets/vendor/aos/aos.js"></script>
+  <script src="./assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="./assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="./assets/js/main.js"></script>
+  <script src="./assets/js/lib/ethers.min.js"></script>
+  <script src="./assets/js/lib/snarkjs.min.js"></script>
+  <script src="./assets/js/lib/browserify-main.js"></script>
+  <script src="./assets/js/lib/snarkjs.min.js"></script>
+  <script src="./assets/js/app.js"></script>
+
+
+
+</body>
+</html>

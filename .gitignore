@@ -1,0 +1,14 @@
+artifacts/
+artifacts-zk/
+cache/
+cache-zk/
+circuits_build/
+node_modules/
+pot18/
+related/
+zk-generate-proof-files/*
+public/*.zkey
+public/*.wasm
+.env
+yarn-error.log
+yarn.lock
