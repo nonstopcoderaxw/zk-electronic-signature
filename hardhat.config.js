@@ -22,11 +22,12 @@ function hhConfig() {
           auto: true,
           interval: 0
         }
-      },
-      goerli: {
-        url: process.env.goerli_provider,
-        accounts: [ process.env.goerli_owner_pvk, process.env.goerli_nonOwner_pvk, process.env.goerli_fundRecipient_pvk ]
       }
+      // ,
+      // goerli: {
+      //   url: process.env.goerli_provider,
+      //   accounts: [ process.env.goerli_owner_pvk, process.env.goerli_nonOwner_pvk, process.env.goerli_fundRecipient_pvk ]
+      // }
     },
     solidity: {
       compilers: [
