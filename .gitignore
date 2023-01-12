@@ -6,7 +6,7 @@ circuits_build/
 node_modules/
 pot18/
 related/
-zk-generate-proof-files/*
+zk-generate-proof-files/*.*
 public/*.zkey
 public/*.wasm
 .env
