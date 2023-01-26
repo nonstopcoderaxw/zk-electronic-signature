@@ -30,8 +30,8 @@ You can also set it up in your local machine. Steps are below.
 
 <div> 
 Download the two files via the links below<br/>
-<a href="https://zk-proof.sgp1.digitaloceanspaces.com/eSigVerifyMain.wasm" target="_blank">https://nonstopcoderaxw.github.io/zk-electronic-signature</a><br/>
-<a href="https://zk-proof.sgp1.digitaloceanspaces.com/eSignVerify_groth16_final.zkey" target="_blank">https://nonstopcoderaxw.github.io/zk-electronic-signature</a>
+<a href="https://zk-proof.sgp1.digitaloceanspaces.com/eSigVerifyMain.wasm" target="_blank">https://zk-proof.sgp1.digitaloceanspaces.com/eSigVerifyMain.wasm</a><br/>
+<a href="https://zk-proof.sgp1.digitaloceanspaces.com/eSignVerify_groth16_final.zkey" target="_blank">https://zk-proof.sgp1.digitaloceanspaces.com/eSignVerify_groth16_final.zkey</a>
 <br/><br/>
 And then place them into the "zk-generate-proof-files" folder of the project repo<br/>
 <div><br/>
