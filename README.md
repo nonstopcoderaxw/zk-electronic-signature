@@ -6,7 +6,7 @@ ZK Electronic Signature is a framework that
 
 This is a personal project for fun.
 
-## Demo
+## Demo (no longer maintained)
 The idea of this framework has been put into a demo below: 
 
 <a href="https://nonstopcoderaxw.github.io/zk-electronic-signature" target="_blank">https://nonstopcoderaxw.github.io/zk-electronic-signature</a>
