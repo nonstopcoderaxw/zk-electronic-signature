@@ -1,4 +1,4 @@
-## About this Project
+## About this Project(no longer maintained)
 ZK Electronic Signature is a framework that 
 * proofs someone has electronally signed an agreement via a web2 products like DocuSign, Adobe Acrobat Sign, DropboxSign etc.
 * does not reveal anything about the content and the signer of the signed agreement during the proof
