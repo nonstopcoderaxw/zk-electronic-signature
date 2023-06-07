@@ -10,8 +10,6 @@ zk-generate-proof-files/*.zkey
 zk-generate-proof-files/*.wasm
 zk-generate-proof-files/*.json
 
-public/*.zkey
-public/*.wasm
 .env
 yarn-error.log
 yarn.lock

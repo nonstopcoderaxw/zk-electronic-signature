@@ -94,7 +94,6 @@ describe("eSignVerifyGroth16Verifier tests - pure hardhat network", function () 
 			console.log("deployed_verifier address: ", deployed_verifier.address);
 			console.log("deployed_myElectronicContracts address: ", deployed_myElectronicContracts.address);
 			console.log("deployed_MyVault: ", deployed_MyVault.address);
-
 	})
 
 	it("success: exec function", async function () {
